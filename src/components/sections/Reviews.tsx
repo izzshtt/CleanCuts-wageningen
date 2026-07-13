@@ -1,7 +1,7 @@
 'use client';
 
 import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
-import Testimonials, { type Testimonial } from '@/components/ui/testimonial';
+import { TestimonialCard, type Testimonial } from '@/components/ui/testimonial';
 
 const reviews: Testimonial[] = [
   {
@@ -59,7 +59,165 @@ const reviews: Testimonial[] = [
     rating: 5,
     review: 'Strakke fade en alle tijd genomen. Echt vakmanschap.',
   },
+  {
+    id: 7,
+    name: 'Thijs Peperkamp',
+    meta: '4 maanden geleden',
+    rating: 5,
+    avatarColor: '#4f46e5',
+    review: 'Al 3 jaar lang word ik elke keer top geknipt. Super aardige jongens ook. Top zaak! 5 sterren',
+  },
+  {
+    id: 8,
+    name: 'Jan Smans',
+    meta: '3 maanden geleden',
+    rating: 5,
+    avatarColor: '#6d4c33',
+    review: 'Mooie en nette zaak waar een cleancut prioriteit nummer 1 is. Leuk en hecht team die allemaal voor het perfecte kapsel gaan. Kom zelf al een paar jaar bij cleancuts/Gijs en heb geen klachten gehad.',
+  },
+  {
+    id: 9,
+    name: 'Kevin la Maitre',
+    meta: '3 maanden geleden',
+    rating: 5,
+    avatarColor: '#e8710a',
+    review: 'Al jaren vaste klant bij Gijs, altijd een gezellige sfeer en elke keer weer een top kapsel.',
+  },
+  {
+    id: 10,
+    name: 'Zafi Plomp',
+    meta: '8 maanden geleden',
+    rating: 5,
+    review: 'Heel netjes geknipt, super aardige kapper',
+  },
+  {
+    id: 11,
+    name: 'Jan Druif',
+    meta: '10 maanden geleden',
+    rating: 5,
+    avatarColor: '#37474f',
+    review: 'De sfeer hier is top, en er zijn altijd leuke gesprekken. Ik zou het zeker aanbevelen, dankzij CleanCuts zijn mijn wenkbrauwen weer helemaal fris!',
+  },
+  {
+    id: 12,
+    name: 'Michael Van schaik',
+    meta: '9 maanden geleden',
+    rating: 5,
+    avatarColor: '#00897b',
+    review: 'Een hele prettige kapperszaak altijd heel vriendelijk en altijd bereid om een praatje te maken. Heel erg fijn om in de stoel te zitten en geknipt hier te worden!',
+  },
+  {
+    id: 13,
+    name: 'Robin Vdw',
+    meta: '3 maanden geleden',
+    rating: 5,
+    avatarColor: '#8e24aa',
+    review: 'Toppers die je elke dag fris zetten!',
+  },
+  {
+    id: 14,
+    name: 'Jasper',
+    meta: '5 maanden geleden',
+    rating: 5,
+    review: 'Altijd goede service en fijn personeel.',
+  },
+  {
+    id: 15,
+    name: 'Muhammad Usman Iqbal',
+    meta: '4 maanden geleden',
+    rating: 5,
+    review: 'Friendly staff, Had very good experience.',
+  },
+  {
+    id: 16,
+    name: 'Thomas van den Elsen',
+    meta: '10 maanden geleden',
+    rating: 5,
+    avatarColor: '#455a64',
+    review: 'Beste en gezelligste kapper van Wageningen om je goed te laten zetten!! Zeker een aanrader!',
+  },
+  {
+    id: 17,
+    name: 'Max Wulfen',
+    meta: '11 maanden geleden',
+    rating: 5,
+    avatarColor: '#546e7a',
+    review: 'Beste kapper van Wageningen en omstreken knip al 6 jaar bij hem nog nooit ontevreden weg gegaan',
+  },
+  {
+    id: 18,
+    name: 'Daan Verkuijl',
+    meta: '3 weken geleden',
+    rating: 5,
+    avatarColor: '#5d4037',
+    review: 'Beste kapper van Wageningen!',
+  },
+  {
+    id: 19,
+    name: 'Elias Martinez',
+    meta: '4 maanden geleden',
+    rating: 5,
+    avatarColor: '#fb8c00',
+    review: 'Beste Barber altijd Friss',
+  },
+  {
+    id: 20,
+    name: 'Dikkyoshi21',
+    meta: '7 maanden geleden',
+    rating: 5,
+    review: 'Beste kappersbeurt ooit!!!',
+  },
+  {
+    id: 21,
+    name: 'Jantje Ruisch',
+    meta: '11 maanden geleden',
+    rating: 5,
+    avatarColor: '#5e35b1',
+    review: 'Vakwerk en super sfeer! Geweldig mooie zaak en klantvriendelijkheid ligt hoog!!',
+  },
+  {
+    id: 22,
+    name: 'Joeri Houvast',
+    meta: '11 maanden geleden',
+    rating: 5,
+    avatarColor: '#3949ab',
+    review: 'Gastvrij, lekker koud drinken, strak geknipt en lekker kunnen praten.',
+  },
+  {
+    id: 23,
+    name: 'Mika van Ernst',
+    meta: 'een jaar geleden',
+    rating: 5,
+    review: 'Top service, altijd bereikbaar en vriendelijk, Gijs zet je altijd goed 👍',
+  },
+  {
+    id: 24,
+    name: 'Maxim GM',
+    meta: '10 maanden geleden',
+    rating: 5,
+    avatarColor: '#3949ab',
+    review: 'Vriendelijke en correcte kappers in een mooie ruime zaak 👌',
+  },
+  {
+    id: 25,
+    name: 'Robin van den Oever',
+    meta: '9 maanden geleden',
+    rating: 5,
+    review: 'Geknipt door Micha, goed resultaat en een goeie kerel!',
+  },
+  {
+    id: 26,
+    name: 'Daan Rolloos',
+    meta: '10 maanden geleden',
+    rating: 5,
+    avatarColor: '#d81b60',
+    review: 'Fantastisch geholpen door Gijs',
+  },
 ];
+
+const half = Math.ceil(reviews.length / 2);
+const rowA = reviews.slice(0, half);
+const rowB = reviews.slice(half);
 
 export default function Reviews() {
   const { ref, inView } = useInView(0.1);
@@ -120,13 +278,40 @@ export default function Reviews() {
             ...fadeIn(inView, 140),
           }}
         >
-          Echte Google-reviews van klanten in Wageningen — gemiddeld 5,0 sterren.
+          Echte Google-reviews van 60+ tevreden klanten in Wageningen: gemiddeld 4,9 sterren.
           Tevreden? Laat ook een review achter.
         </p>
       </div>
 
-      <div style={{ ...fadeUp(inView, 200) }}>
-        <Testimonials items={reviews} />
+      <div style={{ ...fadeUp(inView, 200) }} className="flex flex-col gap-6">
+        <div className="group overflow-hidden [--gap:1.5rem]">
+          <div className="flex items-stretch [gap:var(--gap)] animate-marquee-right group-hover:[animation-play-state:paused]">
+            <div className="flex items-stretch [gap:var(--gap)]">
+              {rowA.map((t) => (
+                <TestimonialCard key={`a-${t.id}`} testimonial={t} />
+              ))}
+            </div>
+            <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
+              {rowA.map((t) => (
+                <TestimonialCard key={`a-dup-${t.id}`} testimonial={t} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="group overflow-hidden [--gap:1.5rem]">
+          <div className="flex items-stretch [gap:var(--gap)] animate-marquee-left group-hover:[animation-play-state:paused]">
+            <div className="flex items-stretch [gap:var(--gap)]">
+              {rowB.map((t) => (
+                <TestimonialCard key={`b-${t.id}`} testimonial={t} />
+              ))}
+            </div>
+            <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
+              {rowB.map((t) => (
+                <TestimonialCard key={`b-dup-${t.id}`} testimonial={t} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

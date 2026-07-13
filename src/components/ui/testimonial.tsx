@@ -5,6 +5,7 @@ export type Testimonial = {
   name: string;
   meta?: string;
   image?: string;
+  avatarColor?: string;
   rating: number;
   review: string;
 };
@@ -20,7 +21,7 @@ function initials(name: string) {
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] max-w-xs w-full transition-transform duration-300 hover:-translate-y-1">
+    <div className="bg-white p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] w-[280px] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1">
       <div className="flex items-center gap-3">
         {testimonial.image ? (
           <img
@@ -33,7 +34,12 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         ) : (
           <div
             aria-hidden="true"
-            className="w-12 h-12 rounded-full flex items-center justify-center bg-[#1a1a1a] text-[#c9a24b] font-space text-sm font-semibold"
+            className={
+              testimonial.avatarColor
+                ? 'w-12 h-12 rounded-full flex items-center justify-center text-white font-space text-sm font-semibold'
+                : 'w-12 h-12 rounded-full flex items-center justify-center bg-[#1a1a1a] text-[#c9a24b] font-space text-sm font-semibold'
+            }
+            style={testimonial.avatarColor ? { backgroundColor: testimonial.avatarColor } : undefined}
           >
             {initials(testimonial.name)}
           </div>

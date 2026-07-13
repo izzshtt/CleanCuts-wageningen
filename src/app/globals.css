@@ -37,6 +37,14 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* ─── Responsive section grids (inline styles can't hold media queries) ─── */
 .about-grid { grid-template-columns: 1fr 1fr; }
 .faq-grid { grid-template-columns: 0.85fr 1.15fr; gap: 64px; }
