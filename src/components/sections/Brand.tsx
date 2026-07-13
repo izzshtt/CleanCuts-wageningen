@@ -1,4 +1,6 @@
-import { useInView, fadeUp, fadeIn } from '../hooks/useInView';
+'use client';
+
+import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
 
 export default function Brand() {
   const { ref, inView } = useInView(0.2);

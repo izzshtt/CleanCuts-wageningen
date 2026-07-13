@@ -1,5 +1,7 @@
-import { useInView, fadeUp, fadeIn } from '../hooks/useInView';
-import Testimonials, { type Testimonial } from './ui/testimonial';
+'use client';
+
+import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
+import Testimonials, { type Testimonial } from '@/components/ui/testimonial';
 
 const reviews: Testimonial[] = [
   {

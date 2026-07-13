@@ -1,4 +1,6 @@
-import { useInView, fadeUp, fadeIn } from '../hooks/useInView';
+'use client';
+
+import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
 
 const OG_LOGO =
   'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/image-high.png';

@@ -1,5 +1,7 @@
+'use client';
+
 import { ArrowUpRight } from 'lucide-react';
-import { useInView, scaleIn, fadeUp } from '../hooks/useInView';
+import { useInView, scaleIn, fadeUp } from '../../hooks/useInView';
 
 const BOOKING_URL =
   'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';

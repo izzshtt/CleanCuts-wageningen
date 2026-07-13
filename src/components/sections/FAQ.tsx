@@ -1,4 +1,6 @@
-import { useInView, fadeUp, slideLeft } from '../hooks/useInView';
+'use client';
+
+import { useInView, fadeUp, slideLeft } from '../../hooks/useInView';
 import { FaqPro, type FaqProItem } from '@/components/ui/faq-pro';
 
 const faqs: FaqProItem[] = [

@@ -1,4 +1,6 @@
-import { useInView, slideLeft, slideRight } from '../hooks/useInView';
+'use client';
+
+import { useInView, slideLeft, slideRight } from '../../hooks/useInView';
 
 export default function About() {
   const { ref, inView } = useInView(0.12);

@@ -1,4 +1,6 @@
-import { useInView, fadeUp, fadeIn } from '../hooks/useInView';
+'use client';
+
+import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
 
 function EyebrowLabel({ children }: { children: React.ReactNode }) {
   return (
