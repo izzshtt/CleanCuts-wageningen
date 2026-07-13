@@ -36,8 +36,8 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             aria-hidden="true"
             className={
               testimonial.avatarColor
-                ? 'w-12 h-12 rounded-full flex items-center justify-center text-white font-space text-sm font-semibold'
-                : 'w-12 h-12 rounded-full flex items-center justify-center bg-[#1a1a1a] text-[#c9a24b] font-space text-sm font-semibold'
+                ? 'w-12 h-12 rounded-full flex items-center justify-center text-white font-sans text-lg font-semibold'
+                : 'w-12 h-12 rounded-full flex items-center justify-center bg-[#1a1a1a] text-[#c9a24b] font-sans text-lg font-semibold'
             }
             style={testimonial.avatarColor ? { backgroundColor: testimonial.avatarColor } : undefined}
           >
