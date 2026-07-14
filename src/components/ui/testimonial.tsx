@@ -21,7 +21,7 @@ function initials(name: string) {
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] w-[230px] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1">
+    <div className="bg-white p-5 sm:p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] w-[230px] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1">
       <div className="flex items-center gap-3">
         {testimonial.image ? (
           <img
@@ -45,7 +45,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           </div>
         )}
         <div className="min-w-0">
-          <p className="font-outfit text-lg leading-tight text-[#111] truncate">
+          <p className="font-outfit text-base sm:text-lg leading-tight text-[#111] truncate">
             {testimonial.name}
           </p>
           {testimonial.meta && (
@@ -65,7 +65,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         ))}
       </div>
 
-      <p className="text-gray-600 mt-4 leading-relaxed">"{testimonial.review}"</p>
+      <p className="text-gray-600 mt-4 leading-relaxed line-clamp-6 sm:line-clamp-none">"{testimonial.review}"</p>
     </div>
   );
 }

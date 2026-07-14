@@ -315,7 +315,7 @@ export default function Reviews() {
             ...fadeIn(inView, 140),
           }}
         >
-          Echte Google-reviews van 60+ tevreden klanten in Wageningen: gemiddeld 4,9 sterren.
+          Meer dan 60+ tevreden klanten in Wageningen: gemiddeld 4,9 sterren.
           Tevreden? Laat ook een review achter.
         </p>
       </div>

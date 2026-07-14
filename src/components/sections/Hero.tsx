@@ -60,13 +60,13 @@ export default function Hero() {
         preload="metadata"
         poster={HERO_IMG}
         aria-label="Clean Cuts Wageningen"
+        className="hero-video"
         style={{
           position: 'absolute',
           inset: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-          objectPosition: 'center',
           ...enter('heroFadeIn', 0, 1.2),
         }}
       >
@@ -87,12 +87,10 @@ export default function Hero() {
 
       {/* Headline block */}
       <div
+        className="hero-headline-block"
         style={{
           position: 'absolute',
           left: 'clamp(20px, 3.9vw, 56px)',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          maxWidth: 'clamp(420px, 50vw, 720px)',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'stretch',
