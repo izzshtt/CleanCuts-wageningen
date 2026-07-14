@@ -3,6 +3,9 @@
 // verandert, alleen SITE_URL hieronder aanpassen.
 export const SITE_URL = 'https://cleancuts.nl';
 
+export const BOOKING_URL =
+  'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';
+
 export const BUSINESS = {
   name: 'Clean Cuts Wageningen',
   telephone: '+31615618319',
@@ -14,7 +17,7 @@ export const BUSINESS = {
     addressCountry: 'NL',
   },
   priceRange: '€7,50 - €35,00',
-  areaServed: ['Wageningen', 'Arnhem', 'Heteren', 'Elst', 'Bennekom', 'Ede', 'Zetten', 'Heteren', 'Renkum', 'Oosterbeek', 'Rhenen', 'Veenendaal', 'Zetten'],
+  areaServed: ['Wageningen', 'Arnhem', 'Heteren', 'Elst', 'Bennekom', 'Ede', 'Zetten', 'Renkum', 'Oosterbeek', 'Rhenen', 'Veenendaal'],
   sameAs: [
     'https://www.instagram.com/cleancuts_wageningen',
     'https://www.tiktok.com/@cleancutswageningen',

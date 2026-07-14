@@ -2,9 +2,7 @@
 
 import { ArrowUpRight } from 'lucide-react';
 import { useInView, scaleIn, fadeUp } from '../../hooks/useInView';
-
-const BOOKING_URL =
-  'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';
+import { BOOKING_URL } from '@/lib/site-config';
 
 export default function CTA() {
   const { ref, inView } = useInView(0.2);

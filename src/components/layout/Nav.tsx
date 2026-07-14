@@ -3,9 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-
-const BOOKING_URL =
-  'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';
+import { BOOKING_URL } from '@/lib/site-config';
 
 const navLinks = [
   { label: 'Home', href: '#home', active: true },

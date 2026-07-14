@@ -41,7 +41,7 @@ export default function Brand() {
         Waar wij voor staan
       </div>
 
-      <p
+      <h2
         style={{
           margin: '0 auto',
           maxWidth: '920px',
@@ -56,7 +56,7 @@ export default function Brand() {
         <strong style={{ fontWeight: 600 }}>'Clean'</strong> staat voor fris, verzorgd en verfijnd,
         terwijl <strong style={{ fontWeight: 600 }}>'Cuts'</strong> niet alleen verwijst naar een
         perfecte knipbeurt, maar ook symbool staat voor precisie en vakmanschap.
-      </p>
+      </h2>
     </section>
   );
 }

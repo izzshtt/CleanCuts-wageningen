@@ -104,7 +104,7 @@ export default function Footer() {
             }}
           >
             <a
-              href="https://maps.google.com/maps?q=Lawickse+Allee+3%2C+Wageningen"
+              href="https://maps.google.com/maps?q=Lawickse+Allee+3c%2C+Wageningen"
               target="_blank"
               rel="noopener noreferrer"
               style={{ ...LINK_BASE, display: 'block' }}

@@ -45,7 +45,7 @@ export default function Intro() {
       <div style={fadeIn(inView, 0)}>
         <EyebrowLabel>Welkom bij Clean Cuts</EyebrowLabel>
       </div>
-      <p
+      <h2
         style={{
           margin: 0,
           fontFamily: "'Outfit', system-ui, sans-serif",
@@ -60,7 +60,7 @@ export default function Intro() {
         Bij Clean Cuts bieden we méér dan alleen een knipbeurt. Kom langs in onze moderne, gastvrije
         zaak, waar altijd iets interessants te lezen is en een kopje koffie klaarstaat terwijl je
         wacht.
-      </p>
+      </h2>
     </section>
   );
 }

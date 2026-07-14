@@ -1,8 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
-
-const BOOKING_URL =
-  'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';
+import { BOOKING_URL } from '@/lib/site-config';
 
 const HERO_IMG =
   'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/f9fc1605-0ca5-4e56-bae8-2a2dc59e7b4c-standard-9psczl.jpg';

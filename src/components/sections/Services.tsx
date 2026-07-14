@@ -1,9 +1,7 @@
 'use client';
 
 import { useInView, fadeUp } from '../../hooks/useInView';
-
-const BOOKING_URL =
-  'https://knipklok.nl/kapperszaak/cleancutswageningen/afspraak?shopname=cleancutswageningen&r=1';
+import { BOOKING_URL } from '@/lib/site-config';
 
 const services = [
   {
