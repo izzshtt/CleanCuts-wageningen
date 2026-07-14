@@ -24,26 +24,21 @@
   }
 }
 
-/* Respect users who ask for less motion: reveal content instantly instead
-   of animating, and stop the ambient spinner. */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee-left,
-  .animate-marquee-right {
-    animation: none !important;
-    transform: none !important;
-  }
+
+/* ─── Marquee animations ─── */
+@keyframes marquee-left {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-50%); }
 }
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+.animate-marquee-left  { animation: marquee-left  40s linear infinite; }
+.animate-marquee-right { animation: marquee-right 40s linear infinite; }
+.group:hover .animate-marquee-left,
+.group:hover .animate-marquee-right { animation-play-state: paused; }
 
 /* ─── Responsive section grids (inline styles can't hold media queries) ─── */
 .about-grid { grid-template-columns: 1fr 1fr; }
