@@ -16,9 +16,8 @@ export const BUSINESS = {
   priceRange: '€7,50 - €35,00',
   areaServed: ['Wageningen', 'Arnhem', 'Heteren', 'Elst', 'Bennekom', 'Ede', 'Zetten', 'Heteren', 'Renkum', 'Oosterbeek', 'Rhenen', 'Veenendaal'],
   sameAs: [
-    'https://www.tiktok.com/@cleancutswageningen?_r=1&_t=ZG-981gdS4Y7lo',
-    'https://www.tiktok.com/@gijsthebarberdutch?_r=1&_t=ZG-981gbiFWGHJ',
-    'https://www.tiktok.com/@cleancuts_wageningen',
+    'https://www.instagram.com/cleancuts_wageningen',
+    'https://www.tiktok.com/@cleancutswageningen',
   ],
   openingHours: [
     { days: ['Monday'], opens: '12:00', closes: '18:00' },

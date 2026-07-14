@@ -173,7 +173,7 @@ export default function Footer() {
         <div className="footer-bottom-left" style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap' }}>
           <span>© 2026 Clean Cuts Wageningen</span>
           <a
-            href="https://instagram.com/cleancuts_wageningen"
+            href="https://www.instagram.com/cleancuts_wageningen"
             target="_blank"
             rel="noopener noreferrer"
             style={{ ...LINK_BASE, ...SOCIAL_LINK_EXTRA }}
@@ -191,7 +191,7 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="https://www.tiktok.com/@cleancuts_wageningen"
+            href="https://www.tiktok.com/@cleancutswageningen?_r=1&_t=ZG-981gdS4Y7lo"
             target="_blank"
             rel="noopener noreferrer"
             style={{ ...LINK_BASE, ...SOCIAL_LINK_EXTRA }}
