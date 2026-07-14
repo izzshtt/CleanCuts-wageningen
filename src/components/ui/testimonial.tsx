@@ -21,7 +21,7 @@ function initials(name: string) {
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] w-[280px] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1">
+    <div className="bg-white p-6 rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.06)] w-[230px] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1">
       <div className="flex items-center gap-3">
         {testimonial.image ? (
           <img

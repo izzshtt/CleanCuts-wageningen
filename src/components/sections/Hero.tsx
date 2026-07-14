@@ -75,6 +75,7 @@ export default function Hero() {
 
       {/* Gradient overlay */}
       <div
+        className="hero-overlay"
         style={{
           position: 'absolute',
           inset: 0,
@@ -111,6 +112,7 @@ export default function Hero() {
 
         {/* H1 — three lines, each with its own tick mark */}
         <h1
+          className="hero-headline"
           style={{
             margin: 0,
             fontFamily: "'Outfit', system-ui, sans-serif",

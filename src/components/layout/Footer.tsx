@@ -161,6 +161,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div
+        className="footer-bottom"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr auto 1fr',
@@ -173,7 +174,7 @@ export default function Footer() {
           ...fadeIn(inView, 300),
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap' }}>
+        <div className="footer-bottom-left" style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap' }}>
           <span>© 2026 Clean Cuts Wageningen</span>
           <a
             href="https://instagram.com/cleancuts_wageningen"
@@ -219,7 +220,7 @@ export default function Footer() {
         >
           Designed by Altevo
         </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap', justifySelf: 'end' }}>
+        <div className="footer-bottom-right" style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap', justifySelf: 'end' }}>
           <a
             href="/algemene-voorwaarden"
             style={LINK_BASE}

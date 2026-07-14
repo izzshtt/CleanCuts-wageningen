@@ -82,8 +82,6 @@ const reviews: Testimonial[] = [
     name: 'Kevin la Maitre',
     meta: '3 maanden geleden',
     rating: 5,
-    image:
-      'https://www.google.com/maps/contrib/112448085468233539944/reviews?hl=nl-NL',
     review: 'Al jaren vaste klant bij Gijs, altijd een gezellige sfeer en elke keer weer een top kapsel.',
   },
   {
@@ -91,8 +89,6 @@ const reviews: Testimonial[] = [
     name: 'Zafi Plomp',
     meta: '8 maanden geleden',
     rating: 5,
-    image:
-      'https://www.google.com/maps/contrib/102172795273536748879/reviews?hl=nl-NL',
     review: 'Heel netjes geknipt, super aardige kapper',
   },
   {
@@ -100,8 +96,6 @@ const reviews: Testimonial[] = [
     name: 'Jan Druif',
     meta: '10 maanden geleden',
     rating: 5,
-    image:
-      'https://www.google.com/maps/contrib/114938143852028399036/reviews?hl=nl-NL',
     review: 'De sfeer hier is top, en er zijn altijd leuke gesprekken. Ik zou het zeker aanbevelen, dankzij CleanCuts zijn mijn wenkbrauwen weer helemaal fris!',
   },
   {
@@ -109,8 +103,6 @@ const reviews: Testimonial[] = [
     name: 'Michael Van schaik',
     meta: '9 maanden geleden',
     rating: 5,
-    image:
-      'https://www.google.com/maps/contrib/112040016415782803356/reviews?hl=nl-NL',
     review: 'Een hele prettige kapperszaak altijd heel vriendelijk en altijd bereid om een praatje te maken. Heel erg fijn om in de stoel te zitten en geknipt hier te worden!',
   },
   {
@@ -118,8 +110,6 @@ const reviews: Testimonial[] = [
     name: 'Robin Vdw',
     meta: '3 maanden geleden',
     rating: 5,
-    image:
-      'https://www.google.com/maps/contrib/105029090493027467330/reviews?hl=nl-NL',
     review: 'Toppers die je elke dag fris zetten!',
   },
   {
