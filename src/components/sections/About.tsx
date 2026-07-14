@@ -92,8 +92,9 @@ export default function About() {
           }}
         >
           Clean Cuts is hét adres voor jou. Onze kapsalon is volledig gespecialiseerd in het
-          knippen, trimmen en scheren van mannen in Wageningen. We staan dagelijks voor je klaar om
-          je een stijlvol en verzorgd kapsel te geven.
+          knippen, trimmen en scheren van mannen in Wageningen en omgeving, waaronder Ede,
+          Bennekom, Arnhem, Elst, Heteren en Zetten. We staan dagelijks voor je klaar om je een
+          stijlvol en verzorgd kapsel te geven.
         </p>
 
         <p

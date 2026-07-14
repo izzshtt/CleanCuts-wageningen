@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Outfit, Hanken_Grotesk, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/site-config';
 
 const outfit = Outfit({
   weight: ['300', '400', '500', '600'],
@@ -21,8 +23,29 @@ const space = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Clean Cuts Wageningen | Kapper voor de Moderne Man',
-  description: 'Kapperszaak in Wageningen. Boek eenvoudig een afspraak online.',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Clean Cuts Wageningen | Herenkapper voor de Moderne Man',
+    template: '%s | Clean Cuts Wageningen',
+  },
+  description:
+    'Herenkapper in Wageningen voor knippen, baard trimmen en scheren. Ook goed bereikbaar vanuit Ede, Bennekom, Renkum, Arnhem en omgeving. Boek eenvoudig een afspraak online.',
+  openGraph: {
+    title: 'Clean Cuts Wageningen | Herenkapper voor de Moderne Man',
+    description:
+      'Herenkapper in Wageningen voor knippen, baard trimmen en scheren. Boek eenvoudig een afspraak online.',
+    url: SITE_URL,
+    siteName: 'Clean Cuts Wageningen',
+    locale: 'nl_NL',
+    type: 'website',
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -33,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className={`${outfit.variable} ${hanken.variable} ${space.variable}`}>
+        <JsonLd />
         <div
           style={{
             background: '#f4f4f4',
