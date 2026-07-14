@@ -48,19 +48,19 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/cleancuts-logo.webp',
-        width: 512,
-        height: 512,
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
         alt: 'Clean Cuts Wageningen',
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Clean Cuts Wageningen | Herenkapper voor de Moderne Man',
     description:
       'Herenkapper in Wageningen voor knippen, baard trimmen en scheren. Boek eenvoudig een afspraak online.',
-    images: ['/cleancuts-logo.webp'],
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: SITE_URL,
