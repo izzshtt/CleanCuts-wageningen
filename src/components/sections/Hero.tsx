@@ -60,7 +60,6 @@ export default function Hero() {
         preload="metadata"
         poster={HERO_IMG}
         aria-label="Clean Cuts Wageningen"
-        className="hero-video"
         style={{
           position: 'absolute',
           inset: 0,
@@ -76,7 +75,6 @@ export default function Hero() {
 
       {/* Gradient overlay */}
       <div
-        className="hero-mobile-scrim"
         style={{
           position: 'absolute',
           inset: 0,

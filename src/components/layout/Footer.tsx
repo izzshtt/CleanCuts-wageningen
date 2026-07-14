@@ -161,7 +161,6 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div
-        className="footer-bottom-bar"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr auto 1fr',
