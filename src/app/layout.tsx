@@ -3,6 +3,7 @@ import { Outfit, Hanken_Grotesk, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import { SITE_URL } from '@/lib/site-config';
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({
   weight: ['300', '400', '500', '600'],
@@ -82,6 +83,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className={`${outfit.variable} ${hanken.variable} ${space.variable}`}>
+        <Analytics />
         <JsonLd />
         <div
           style={{
