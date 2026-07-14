@@ -249,14 +249,14 @@ type MarqueeRowProps = { items: Testimonial[]; direction: 'right' | 'left'; pref
 
 function MarqueeRow({ items, direction, prefix }: MarqueeRowProps) {
   return (
-    <div className="group overflow-hidden [--gap:1.5rem]">
-      <div className={`flex items-stretch [gap:var(--gap)] animate-marquee-${direction} group-hover:[animation-play-state:paused]`}>
-        <div className="flex items-stretch [gap:var(--gap)]">
+    <div className="reviews-marquee-row group overflow-hidden [--gap:1.5rem]">
+      <div className={`reviews-marquee-track flex items-stretch [gap:var(--gap)] animate-marquee-${direction} group-hover:[animation-play-state:paused]`}>
+        <div className="reviews-cards flex items-stretch [gap:var(--gap)]">
           {items.map((t) => (
             <TestimonialCard key={`${prefix}-${t.id}`} testimonial={t} />
           ))}
         </div>
-        <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
+        <div className="reviews-marquee-dup flex items-stretch [gap:var(--gap)]" aria-hidden="true">
           {items.map((t) => (
             <TestimonialCard key={`${prefix}-dup-${t.id}`} testimonial={t} />
           ))}

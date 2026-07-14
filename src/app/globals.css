@@ -56,10 +56,33 @@
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 @media (max-width: 560px) {
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom-bar { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 }
 @media (max-width: 680px) {
   .hero-review-card { display: none !important; }
+  .hero-mobile-scrim {
+    background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.7) 100%);
+  }
+  .hero-video {
+    object-position: 65% center;
+  }
+
+  /* Reviews: stop marquee animation, enable horizontal scroll-snap per card */
+  .reviews-marquee-row { overflow: visible !important; }
+  .reviews-marquee-track { animation: none !important; }
+  .reviews-marquee-dup { display: none !important; }
+  .reviews-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 20px 12px;
+    scrollbar-width: none;
+  }
+  .reviews-cards::-webkit-scrollbar { display: none; }
+  .reviews-cards > * { scroll-snap-align: center; }
 }
 
 @layer utilities {
