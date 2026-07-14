@@ -14,7 +14,7 @@ const faqs: FaqProItem[] = [
     id: 'openingstijden',
     question: 'Wat zijn de openingstijden?',
     answer:
-      'Vrijdag 09:30–20:00 · zaterdag 09:00–17:00 · zondag gesloten · maandag 12:00–18:00 · dinsdag tot en met donderdag 09:30–19:00.',
+      'Maandag 12:00–18:00 · dinsdag tot en met donderdag 09:30–19:00 · vrijdag 09:30–20:00 · zaterdag 09:00–17:00 · zondag gesloten.',
   },
   {
     id: 'zonder-afspraak',
@@ -70,7 +70,7 @@ export default function FAQ() {
                 flexShrink: 0,
               }}
             />
-            04 · FAQ
+            FAQ
           </div>
           <h2
             style={{

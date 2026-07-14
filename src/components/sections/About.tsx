@@ -66,7 +66,7 @@ export default function About() {
               flexShrink: 0,
             }}
           />
-          02 · Over ons
+          Over ons
         </div>
 
         <h2

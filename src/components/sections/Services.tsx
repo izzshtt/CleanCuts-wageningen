@@ -9,29 +9,49 @@ const services = [
   {
     num: '01',
     title: 'Knippen',
-    desc: 'Wassen, knippen en stylen, volledig op jouw wens.',
-    price: '€ 27,50',
+    duration: '60 min',
+    desc: 'Knippen en stylen volledig op jouw wens.',
+    price: 'v.a. € 20,00',
     popular: false,
   },
   {
     num: '02',
     title: 'Knippen + Baard',
+    duration: '60 min',
     desc: 'De complete beurt: kapsel en baard strak afgewerkt.',
-    price: '€ 37,50',
+    price: 'v.a. € 25,00',
     popular: true,
   },
   {
     num: '03',
-    title: 'Baard trimmen',
-    desc: 'Modelleren, trimmen en scheren met heet handdoek.',
-    price: '€ 17,50',
+    title: 'Baard',
+    duration: '30 min',
+    desc: 'Baard modelleren, trimmen en bijwerken.',
+    price: 'v.a. € 7,50',
     popular: false,
   },
   {
     num: '04',
-    title: 'Kind t/m 12 jr',
-    desc: 'Een ontspannen knipbeurt voor de jongste klanten.',
-    price: '€ 20,00',
+    title: 'Tondeuse 1 standje',
+    duration: '20 min',
+    desc: 'Over de gehele hoofd 1 standje, zonder overloop.',
+    price: 'v.a. € —',
+    popular: false,
+  },
+  {
+    num: '05',
+    title: 'All in behandeling',
+    duration: '60 min',
+    desc: 'Knippen, baard bijwerken en haar wassen.',
+    price: 'v.a. € 25,00',
+    popular: false,
+  },
+  {
+    num: '06',
+    title: 'Knippen wassen',
+    duration: '60 min',
+    desc: 'Haar wassen en knippen, strak en fris.',
+    price: 'v.a. € 22,50',
     popular: false,
   },
 ];
@@ -79,7 +99,7 @@ export default function Services() {
                 opacity: 0.55,
               }}
             />
-            01 · Diensten
+            Diensten
           </div>
           <h2
             style={{
@@ -151,15 +171,25 @@ export default function Services() {
               {s.num}
               {s.popular ? ' · Populair' : ''}
             </div>
-            <div
-              style={{
-                fontFamily: "'Outfit', system-ui, sans-serif",
-                fontSize: '24px',
-                color: s.popular ? '#f4f4f4' : '#181818',
-                marginTop: 'auto',
-              }}
-            >
-              {s.title}
+            <div style={{ marginTop: 'auto' }}>
+              <div
+                style={{
+                  fontFamily: "'Outfit', system-ui, sans-serif",
+                  fontSize: '24px',
+                  color: s.popular ? '#f4f4f4' : '#181818',
+                }}
+              >
+                {s.title}
+              </div>
+              <div
+                style={{
+                  font: "500 12px 'Hanken Grotesk', system-ui",
+                  color: s.popular ? 'rgba(245,245,245,.45)' : '#b3b3b3',
+                  marginTop: '3px',
+                }}
+              >
+                {s.duration}
+              </div>
             </div>
             <p
               style={{

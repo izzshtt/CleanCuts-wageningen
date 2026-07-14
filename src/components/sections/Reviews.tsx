@@ -251,7 +251,7 @@ export default function Reviews() {
               opacity: 0.55,
             }}
           />
-          03 · Reviews
+          Reviews
         </div>
 
         <h2

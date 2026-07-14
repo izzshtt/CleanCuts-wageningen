@@ -8,7 +8,7 @@ const BOOKING_URL =
 
 const navLinks = [
   { label: 'Home', href: '#home', active: true },
-  { label: 'Afspraak maken', href: BOOKING_URL, external: true },
+  { label: 'Diensten', href: '#diensten' },
   { label: 'Over ons', href: '#over-ons' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'Contact', href: '#footer' },
@@ -45,8 +45,6 @@ export default function Nav() {
             <a
               key={l.label}
               href={l.href}
-              target={l.external ? '_blank' : undefined}
-              rel={l.external ? 'noopener noreferrer' : undefined}
               className={`nav-link no-underline text-[rgba(255,255,255,0.92)] hover:text-white transition-colors ${
                 l.active ? 'font-semibold opacity-100' : 'font-normal opacity-80'
               }`}
@@ -87,8 +85,6 @@ export default function Nav() {
               <a
                 key={l.label}
                 href={l.href}
-                target={l.external ? '_blank' : undefined}
-                rel={l.external ? 'noopener noreferrer' : undefined}
                 onClick={() => setOpen(false)}
                 className="text-[rgba(255,255,255,0.92)] text-[15px] no-underline hover:text-white transition-colors py-2.5 flex items-center min-h-[44px]"
               >
