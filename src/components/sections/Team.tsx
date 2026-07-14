@@ -29,8 +29,8 @@ function Avatar({ member, delay, inView }: { member: TeamMember; delay: number; 
     >
       <div
         style={{
-          width: 'clamp(96px, 14vw, 128px)',
-          height: 'clamp(96px, 14vw, 128px)',
+          width: 'clamp(140px, 18vw, 200px)',
+          height: 'clamp(140px, 18vw, 200px)',
           borderRadius: '50%',
           overflow: 'hidden',
           background: '#e0e0e0',
@@ -42,7 +42,7 @@ function Avatar({ member, delay, inView }: { member: TeamMember; delay: number; 
           src={member.image}
           alt={member.name}
           loading="lazy"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
           onError={(e) => {
             const img = e.currentTarget;
             img.style.display = 'none';
