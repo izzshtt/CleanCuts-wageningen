@@ -14,7 +14,7 @@ export const BUSINESS = {
     addressCountry: 'NL',
   },
   priceRange: '€7,50 - €35,00',
-  areaServed: ['Wageningen', 'Arnhem', 'Heteren', 'Elst', 'Bennekom', 'Ede', 'Zetten', 'Heteren', 'Renkum', 'Oosterbeek', 'Rhenen', 'Veenendaal'],
+  areaServed: ['Wageningen', 'Arnhem', 'Heteren', 'Elst', 'Bennekom', 'Ede', 'Zetten', 'Heteren', 'Renkum', 'Oosterbeek', 'Rhenen', 'Veenendaal', 'Zetten'],
   sameAs: [
     'https://www.instagram.com/cleancuts_wageningen',
     'https://www.tiktok.com/@cleancutswageningen',
