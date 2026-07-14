@@ -21,6 +21,7 @@ export const BUSINESS = {
   sameAs: [
     'https://www.instagram.com/cleancuts_wageningen',
     'https://www.tiktok.com/@cleancutswageningen',
+    'https://www.tiktok.com/@gijsthebarberdutch',
   ],
   openingHours: [
     { days: ['Monday'], opens: '12:00', closes: '18:00' },
