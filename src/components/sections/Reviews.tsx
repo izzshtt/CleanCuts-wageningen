@@ -64,7 +64,8 @@ const reviews: Testimonial[] = [
     name: 'Thijs Peperkamp',
     meta: '4 maanden geleden',
     rating: 5,
-    avatarColor: '#4f46e5',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocKTTYwI1OGrlIf8XQffCAwDrLaf_aabxNod550NJ2cKZRhVzA=w72-h72-p-rp-mo-br100',
     review: 'Al 3 jaar lang word ik elke keer top geknipt. Super aardige jongens ook. Top zaak! 5 sterren',
   },
   {
@@ -72,7 +73,8 @@ const reviews: Testimonial[] = [
     name: 'Jan Smans',
     meta: '3 maanden geleden',
     rating: 5,
-    avatarColor: '#6d4c33',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocLDpmCrikHwKS3sfoblROD7K6Y7jY90RWw5U1YyR_FU0HldkA=w72-h72-p-rp-mo-br100',
     review: 'Mooie en nette zaak waar een cleancut prioriteit nummer 1 is. Leuk en hecht team die allemaal voor het perfecte kapsel gaan. Kom zelf al een paar jaar bij cleancuts/Gijs en heb geen klachten gehad.',
   },
   {
@@ -80,7 +82,8 @@ const reviews: Testimonial[] = [
     name: 'Kevin la Maitre',
     meta: '3 maanden geleden',
     rating: 5,
-    avatarColor: '#e8710a',
+    image:
+      'https://www.google.com/maps/contrib/112448085468233539944/reviews?hl=nl-NL',
     review: 'Al jaren vaste klant bij Gijs, altijd een gezellige sfeer en elke keer weer een top kapsel.',
   },
   {
@@ -88,6 +91,8 @@ const reviews: Testimonial[] = [
     name: 'Zafi Plomp',
     meta: '8 maanden geleden',
     rating: 5,
+    image:
+      'https://www.google.com/maps/contrib/102172795273536748879/reviews?hl=nl-NL',
     review: 'Heel netjes geknipt, super aardige kapper',
   },
   {
@@ -95,7 +100,8 @@ const reviews: Testimonial[] = [
     name: 'Jan Druif',
     meta: '10 maanden geleden',
     rating: 5,
-    avatarColor: '#37474f',
+    image:
+      'https://www.google.com/maps/contrib/114938143852028399036/reviews?hl=nl-NL',
     review: 'De sfeer hier is top, en er zijn altijd leuke gesprekken. Ik zou het zeker aanbevelen, dankzij CleanCuts zijn mijn wenkbrauwen weer helemaal fris!',
   },
   {
@@ -103,7 +109,8 @@ const reviews: Testimonial[] = [
     name: 'Michael Van schaik',
     meta: '9 maanden geleden',
     rating: 5,
-    avatarColor: '#00897b',
+    image:
+      'https://www.google.com/maps/contrib/112040016415782803356/reviews?hl=nl-NL',
     review: 'Een hele prettige kapperszaak altijd heel vriendelijk en altijd bereid om een praatje te maken. Heel erg fijn om in de stoel te zitten en geknipt hier te worden!',
   },
   {
@@ -111,7 +118,8 @@ const reviews: Testimonial[] = [
     name: 'Robin Vdw',
     meta: '3 maanden geleden',
     rating: 5,
-    avatarColor: '#8e24aa',
+    image:
+      'https://www.google.com/maps/contrib/105029090493027467330/reviews?hl=nl-NL',
     review: 'Toppers die je elke dag fris zetten!',
   },
   {
@@ -119,6 +127,8 @@ const reviews: Testimonial[] = [
     name: 'Jasper',
     meta: '5 maanden geleden',
     rating: 5,
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjVJ19R3lD9aa9Z1aZVUBCz9jlt1Um6-FfYRKvpv3gjvlA1lhCOb=w72-h72-p-rp-mo-br100',
     review: 'Altijd goede service en fijn personeel.',
   },
   {
@@ -126,6 +136,8 @@ const reviews: Testimonial[] = [
     name: 'Muhammad Usman Iqbal',
     meta: '4 maanden geleden',
     rating: 5,
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjXP5qLkLuqbk8Xm1INpNYKBMhdCKStimAj1ZU0Edp15JU-7V5OM=w144-h144-p-rp-mo-br100',
     review: 'Friendly staff, Had very good experience.',
   },
   {
@@ -133,7 +145,8 @@ const reviews: Testimonial[] = [
     name: 'Thomas van den Elsen',
     meta: '10 maanden geleden',
     rating: 5,
-    avatarColor: '#455a64',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocK0JxOPxXPB0omyyyWHHNXav4YUc3ORzq3B2xvD_QGi2NILjg=w72-h72-p-rp-mo-br100',
     review: 'Beste en gezelligste kapper van Wageningen om je goed te laten zetten!! Zeker een aanrader!',
   },
   {
@@ -141,7 +154,8 @@ const reviews: Testimonial[] = [
     name: 'Max Wulfen',
     meta: '11 maanden geleden',
     rating: 5,
-    avatarColor: '#546e7a',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocLsio9iWvmdac-HnPUSjoi19VKntOAO-jtvTST8WMsUOxjUYg=w72-h72-p-rp-mo-br100',
     review: 'Beste kapper van Wageningen en omstreken knip al 6 jaar bij hem nog nooit ontevreden weg gegaan',
   },
   {
@@ -149,7 +163,8 @@ const reviews: Testimonial[] = [
     name: 'Daan Verkuijl',
     meta: '3 weken geleden',
     rating: 5,
-    avatarColor: '#5d4037',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocJdkU7FBoDkGIF91P-_BisCTITYKaMp4b2j7xKHM4r8VWdHGQ=w72-h72-p-rp-mo-br100',
     review: 'Beste kapper van Wageningen!',
   },
   {
@@ -157,7 +172,8 @@ const reviews: Testimonial[] = [
     name: 'Elias Martinez',
     meta: '4 maanden geleden',
     rating: 5,
-    avatarColor: '#fb8c00',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocKOiG5GDgQ-pb65gBEm3X-VD_Jpq2iFVvjZyq4JvVU-ofBX8vI=w144-h144-p-rp-mo-br100',
     review: 'Beste Barber altijd Friss',
   },
   {
@@ -165,6 +181,8 @@ const reviews: Testimonial[] = [
     name: 'Dikkyoshi21',
     meta: '7 maanden geleden',
     rating: 5,
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjWe02r4EuQn3EjH9dD3Jnnactgvkysdjd6zWUEgAyFZjciZkKM=w72-h72-p-rp-mo-br100',
     review: 'Beste kappersbeurt ooit!!!',
   },
   {
@@ -172,7 +190,8 @@ const reviews: Testimonial[] = [
     name: 'Jantje Ruisch',
     meta: '11 maanden geleden',
     rating: 5,
-    avatarColor: '#5e35b1',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocI1XAHer1jWTy3rYSIzL2aka4_Fa9v_iSSSpMBdbRZmbrU0bw=w72-h72-p-rp-mo-br100',
     review: 'Vakwerk en super sfeer! Geweldig mooie zaak en klantvriendelijkheid ligt hoog!!',
   },
   {
@@ -180,7 +199,8 @@ const reviews: Testimonial[] = [
     name: 'Joeri Houvast',
     meta: '11 maanden geleden',
     rating: 5,
-    avatarColor: '#3949ab',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocL6w9L8T1xY7UvM3ye1Ea8Ax7a4YG5K0o1IMu9t7eF79zoiQZc=w72-h72-p-rp-mo-br100',
     review: 'Gastvrij, lekker koud drinken, strak geknipt en lekker kunnen praten.',
   },
   {
@@ -188,6 +208,8 @@ const reviews: Testimonial[] = [
     name: 'Mika van Ernst',
     meta: 'een jaar geleden',
     rating: 5,
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjWDc_zX9MCkKEJUc7nGKSedE7sSiutKLEvEGHQlk9iEImc0dDe-=w72-h72-p-rp-mo-br100',
     review: 'Top service, altijd bereikbaar en vriendelijk, Gijs zet je altijd goed 👍',
   },
   {
@@ -195,7 +217,8 @@ const reviews: Testimonial[] = [
     name: 'Maxim GM',
     meta: '10 maanden geleden',
     rating: 5,
-    avatarColor: '#3949ab',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocKGTcwmYq072NZNwUm6osg0HSQELtxl_oAbkzIHLERfpcgN8g=w72-h72-p-rp-mo-br100',
     review: 'Vriendelijke en correcte kappers in een mooie ruime zaak 👌',
   },
   {
@@ -203,6 +226,8 @@ const reviews: Testimonial[] = [
     name: 'Robin van den Oever',
     meta: '9 maanden geleden',
     rating: 5,
+    image:
+      'https://lh3.googleusercontent.com/a-/ALV-UjUz6ZPK2Z_UG47KuRBg9ofSDOUXTuvW-KapGLoVQjOPBMMKKqBv=w72-h72-p-rp-mo-br100',
     review: 'Geknipt door Micha, goed resultaat en een goeie kerel!',
   },
   {
@@ -210,7 +235,8 @@ const reviews: Testimonial[] = [
     name: 'Daan Rolloos',
     meta: '10 maanden geleden',
     rating: 5,
-    avatarColor: '#d81b60',
+    image:
+      'https://lh3.googleusercontent.com/a/ACg8ocI-FYtQvy7iehAuoRMExFksmXlTfkay2NSunQcVvfkEXlbIpA=w72-h72-p-rp-mo-br100',
     review: 'Fantastisch geholpen door Gijs',
   },
 ];
