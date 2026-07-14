@@ -114,25 +114,6 @@ export default function Services() {
             Knippen, trimmen &amp; scheren
           </h2>
         </div>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            textDecoration: 'none',
-            color: '#111111',
-            borderBottom: '1.5px solid #111111',
-            paddingBottom: '3px',
-            fontWeight: 600,
-            fontSize: '15px',
-            fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
-            transition: 'opacity 0.2s ease',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.5')}
-          onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
-        >
-          Alle diensten &amp; prijzen →
-        </a>
       </div>
 
       {/* Cards grid — staggered */}
@@ -218,38 +199,82 @@ export default function Services() {
         })}
       </div>
 
-      {/* Toon meer / minder knop — alleen zichtbaar op mobiel */}
-      <div className="services-toggle-wrap">
-        <button
-          onClick={() => setExpanded((v) => !v)}
+      {/* Toon meer / minder + boek-knop */}
+      <div
+        style={{
+          marginTop: '28px',
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '16px',
+        }}
+      >
+        {/* Meer/minder — alleen mobiel */}
+        <div className="services-toggle-wrap" style={{ margin: 0 }}>
+          <button
+            onClick={() => {
+              if (expanded) {
+                document.getElementById('diensten')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+              setExpanded((v) => !v);
+            }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'none',
+              border: '1.5px solid #d0d0d0',
+              borderRadius: '10px',
+              padding: '12px 22px',
+              fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
+              fontWeight: 600,
+              fontSize: '14px',
+              color: '#111111',
+              cursor: 'pointer',
+              transition: 'border-color 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#888')}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#d0d0d0')}
+          >
+            {expanded ? 'Minder diensten' : 'Meer diensten'}
+            <svg
+              width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
+              style={{ transition: 'transform 0.25s ease', transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Boek-knop — altijd zichtbaar */}
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            marginTop: '20px',
-            display: 'flex',
+            display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'none',
-            border: '1.5px solid #d0d0d0',
+            background: '#111111',
+            color: '#f4f4f4',
             borderRadius: '10px',
-            padding: '12px 22px',
+            padding: '13px 26px',
             fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
             fontWeight: 600,
             fontSize: '14px',
-            color: '#111111',
-            cursor: 'pointer',
-            transition: 'border-color 0.2s ease',
+            textDecoration: 'none',
+            transition: 'opacity 0.2s ease',
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#888')}
-          onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#d0d0d0')}
+          onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
+          onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
         >
-          {expanded ? 'Minder diensten' : 'Meer diensten'}
-          <svg
-            width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
-            style={{ transition: 'transform 0.25s ease', transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
-          >
-            <path d="M6 9l6 6 6-6" />
+          Boek nu je afspraak
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
-        </button>
+        </a>
       </div>
     </section>
   );
