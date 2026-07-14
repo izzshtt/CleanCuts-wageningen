@@ -12,20 +12,6 @@ export default {
       // Semantic color tokens consumed by src/components/ui/*.
       // The values reference CSS variables that each component sets on its
       // own root (see `componentThemeClassName`), so the palette stays scoped.
-      keyframes: {
-        'marquee-left': {
-          from: { transform: 'translateX(0%)' },
-          to: { transform: 'translateX(-50%)' },
-        },
-        'marquee-right': {
-          from: { transform: 'translateX(-50%)' },
-          to: { transform: 'translateX(0%)' },
-        },
-      },
-      animation: {
-        'marquee-left': 'marquee-left var(--duration,40s) linear infinite',
-        'marquee-right': 'marquee-right var(--duration,40s) linear infinite',
-      },
       colors: {
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',

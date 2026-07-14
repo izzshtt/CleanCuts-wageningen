@@ -70,7 +70,6 @@
 
 /* ─── Hero video object-position ─── */
 .hero-video { object-position: center; }
-@media (max-width: 680px) { .hero-video { object-position: center; } }
 
 /* ─── Hero headline block positioning ─── */
 .hero-headline-block {
@@ -123,12 +122,6 @@
   to   { transform: scaleY(1); opacity: 1; }
 }
 
-/* ─── FAQ accordion ─── */
-details.faq > summary { list-style: none; }
-details.faq > summary::-webkit-details-marker { display: none; }
-details.faq .faqIco { transition: transform 0.25s ease; display: inline-block; }
-details.faq[open] .faqIco { transform: rotate(45deg); }
-
 /* ─── Service card hover ─── */
 .service-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -147,15 +140,6 @@ details.faq[open] .faqIco { transform: rotate(45deg); }
 @media (min-width: 641px) {
   /* Forceer alle kaarten zichtbaar op desktop, ongeacht expanded-state */
   .services-mobile-extra { display: flex !important; }
-}
-
-/* ─── Review card hover ─── */
-.review-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 }
 
 /* ─── Pill button hover lift ─── */

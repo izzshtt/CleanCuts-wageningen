@@ -15,6 +15,13 @@ export default function JsonLd() {
       ...BUSINESS.address,
     },
     areaServed: BUSINESS.areaServed.map((name) => ({ '@type': 'Place', name })),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: '60',
+    },
     sameAs: BUSINESS.sameAs,
     openingHoursSpecification: BUSINESS.openingHours.map((h) => ({
       '@type': 'OpeningHoursSpecification',
