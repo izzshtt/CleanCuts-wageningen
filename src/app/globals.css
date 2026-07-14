@@ -59,7 +59,7 @@
 
 /* ─── Hero video object-position ─── */
 .hero-video { object-position: center; }
-@media (max-width: 680px) { .hero-video { object-position: 50% 30%; } }
+@media (max-width: 680px) { .hero-video { object-position: center; } }
 
 /* ─── Hero headline block positioning ─── */
 .hero-headline-block {

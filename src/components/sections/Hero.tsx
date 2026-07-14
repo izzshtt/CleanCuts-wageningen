@@ -70,6 +70,7 @@ export default function Hero() {
           ...enter('heroFadeIn', 0, 1.2),
         }}
       >
+        <source src="/hero-mobile.mp4" type="video/mp4" media="(max-width: 680px)" />
         <source src="/hero.mp4" type="video/mp4" />
       </video>
 
