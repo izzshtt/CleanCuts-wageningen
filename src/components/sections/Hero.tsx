@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import { BOOKING_URL } from '@/lib/site-config';
@@ -39,6 +42,28 @@ const enter = (name: string, delay: number, duration = 0.75): CSSProperties => (
 });
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const mql = window.matchMedia('(max-width: 680px)');
+
+    const setSource = () => {
+      const wanted = mql.matches ? '/hero-mobile.mp4' : '/hero.mp4';
+      if (video.getAttribute('src') === wanted) return;
+      const wasPlaying = !video.paused;
+      video.src = wanted;
+      video.load();
+      if (wasPlaying) video.play().catch(() => {});
+    };
+
+    setSource();
+    mql.addEventListener('change', setSource);
+    return () => mql.removeEventListener('change', setSource);
+  }, []);
+
   return (
     <section
       id="home"
@@ -51,6 +76,8 @@ export default function Hero() {
     >
       {/* Background video — subtle fade-in, image poster as fallback */}
       <video
+        ref={videoRef}
+        src="/hero.mp4"
         autoPlay
         muted
         loop
@@ -67,10 +94,7 @@ export default function Hero() {
           objectFit: 'cover',
           ...enter('heroFadeIn', 0, 1.2),
         }}
-      >
-        <source src="/hero-mobile.mp4" type="video/mp4" media="(max-width: 680px)" />
-        <source src="/hero.mp4" type="video/mp4" />
-      </video>
+      />
 
       {/* Gradient overlay */}
       <div
