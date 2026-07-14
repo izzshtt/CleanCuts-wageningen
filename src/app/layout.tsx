@@ -30,6 +30,14 @@ export const metadata: Metadata = {
   },
   description:
     'Herenkapper in Wageningen voor knippen, baard trimmen en scheren. Ook goed bereikbaar vanuit Ede, Bennekom, Renkum, Arnhem en omgeving. Boek eenvoudig een afspraak online.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/cleancuts-logo.webp', type: 'image/webp', sizes: '512x512' },
+    ],
+    apple: '/cleancuts-logo.webp',
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     title: 'Clean Cuts Wageningen | Herenkapper voor de Moderne Man',
     description:
@@ -38,6 +46,21 @@ export const metadata: Metadata = {
     siteName: 'Clean Cuts Wageningen',
     locale: 'nl_NL',
     type: 'website',
+    images: [
+      {
+        url: '/cleancuts-logo.webp',
+        width: 512,
+        height: 512,
+        alt: 'Clean Cuts Wageningen',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Clean Cuts Wageningen | Herenkapper voor de Moderne Man',
+    description:
+      'Herenkapper in Wageningen voor knippen, baard trimmen en scheren. Boek eenvoudig een afspraak online.',
+    images: ['/cleancuts-logo.webp'],
   },
   alternates: {
     canonical: SITE_URL,

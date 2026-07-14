@@ -3,8 +3,7 @@
 import type { CSSProperties, MouseEvent } from 'react';
 import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
 
-const OG_LOGO =
-  'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/image-high.png';
+const OG_LOGO = '/cleancuts-logo.webp';
 
 const LINK_BASE: CSSProperties = {
   color: '#d4d4d4',
@@ -49,7 +48,7 @@ export default function Footer() {
             style={{
               width: '80px',
               height: '80px',
-              borderRadius: '10px',
+              borderRadius: '16px',
               display: 'block',
               marginBottom: '18px',
               objectFit: 'cover',

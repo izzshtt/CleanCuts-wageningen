@@ -36,13 +36,12 @@ export default function Nav() {
     >
       <div className="flex items-center justify-between px-5 sm:px-8 lg:px-14 h-[68px]">
         {/* Logo */}
-        <a
-          href="#home"
-          className={`font-outfit font-semibold text-[23px] tracking-[3px] no-underline transition-colors ${
-            isSolidHeader ? 'text-[#f4f4f4]' : 'text-white'
-          }`}
-        >
-          CLEAN&nbsp;CUTS
+        <a href="#home" className="no-underline flex items-center">
+          <img
+            src="/cleancuts-logo.webp"
+            alt="Clean Cuts Wageningen"
+            style={{ width: '44px', height: '44px', borderRadius: '10px', objectFit: 'cover', display: 'block' }}
+          />
         </a>
 
         {/* Desktop links */}
