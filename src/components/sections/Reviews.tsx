@@ -324,6 +324,69 @@ export default function Reviews() {
         <MarqueeRow items={rowA} direction="right" prefix="a" />
         <MarqueeRow items={rowB} direction="left" prefix="b" />
       </div>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '52px',
+          ...fadeUp(inView, 320),
+        }}
+      >
+        <a
+          href="https://www.google.com/maps/place/Cleancutswageningen/@51.9687699,5.661981,17z/data=!4m8!3m7!1s0x47c7ab0b6a839c85:0x8c53e37565f8082!8m2!3d51.9687699!4d5.6645559!9m1!1b1!16s%2Fg%2F11x5snl183?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="google-review-btn"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '12px',
+            padding: '14px 28px',
+            background: '#ffffff',
+            border: '1.5px solid #e0e0e0',
+            borderRadius: '12px',
+            fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
+            fontSize: '15px',
+            fontWeight: 500,
+            color: '#1a1a1a',
+            textDecoration: 'none',
+            transition: 'transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease',
+          }}
+          onMouseEnter={(e) => {
+            Object.assign(e.currentTarget.style, {
+              transform: 'translateY(-3px)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.10)',
+              borderColor: '#c8c8c8',
+            });
+          }}
+          onMouseLeave={(e) => {
+            Object.assign(e.currentTarget.style, {
+              transform: 'translateY(0)',
+              boxShadow: 'none',
+              borderColor: '#e0e0e0',
+            });
+          }}
+        >
+          {/* Google G logo */}
+          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.1 33.9 29.6 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 6 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.2 13 24 13c3.1 0 6 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.7 7.4 6.3 14.7z"/>
+            <path fill="#FBBC05" d="M24 46c5.5 0 10.5-1.8 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.5 0-10.2-3.5-11.9-8.4l-7 5.4C8.5 41.8 15.7 46 24 46z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.3-2.4 4.3-4.3 5.7l6.7 5.5C42.1 36.2 45 30.6 45 24c0-1.3-.2-2.7-.5-4z"/>
+          </svg>
+          <span>
+            <span style={{ display: 'block', fontSize: '11px', color: '#888', lineHeight: 1, marginBottom: '2px', fontWeight: 400 }}>
+              Tevreden?
+            </span>
+            Laat een review achter op Google
+          </span>
+          {/* Arrow */}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ opacity: 0.4, marginLeft: '2px' }}>
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
     </section>
   );
 }
