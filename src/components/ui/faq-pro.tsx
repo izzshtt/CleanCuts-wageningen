@@ -128,6 +128,7 @@ function FaqPro({
   );
 
   React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpenId((current) => {
       if (!current) {
         return current;

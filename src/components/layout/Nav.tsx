@@ -49,9 +49,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <nav
-          className={`hidden lg:flex items-center gap-[26px] text-[14px] transition-colors ${
-            isSolidHeader ? 'text-[rgba(255,255,255,0.92)]' : 'text-[rgba(255,255,255,0.92)]'
-          }`}
+          className="hidden lg:flex items-center gap-[26px] text-[14px] transition-colors text-[rgba(255,255,255,0.92)]"
         >
           {navLinks.map((l) => (
             <a
@@ -67,7 +65,7 @@ export default function Nav() {
         </nav>
 
         {/* Right actions */}
-        <div className={`hidden lg:flex items-center gap-5 ${isSolidHeader ? 'text-white' : 'text-white'}`}>
+        <div className="hidden lg:flex items-center gap-5 text-white">
           <a
             href={BOOKING_URL}
             target="_blank"
@@ -81,9 +79,7 @@ export default function Nav() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className={`lg:hidden p-2 -mr-2 flex items-center justify-center min-w-[44px] min-h-[44px] transition-colors ${
-            isSolidHeader ? 'text-white' : 'text-white'
-          }`}
+          className="lg:hidden p-2 -mr-2 flex items-center justify-center min-w-[44px] min-h-[44px] transition-colors text-white"
           aria-label={open ? 'Menu sluiten' : 'Menu openen'}
           aria-expanded={open}
         >

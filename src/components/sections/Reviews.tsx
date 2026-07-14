@@ -245,6 +245,27 @@ const half = Math.ceil(reviews.length / 2);
 const rowA = reviews.slice(0, half);
 const rowB = reviews.slice(half);
 
+type MarqueeRowProps = { items: Testimonial[]; direction: 'right' | 'left'; prefix: string };
+
+function MarqueeRow({ items, direction, prefix }: MarqueeRowProps) {
+  return (
+    <div className="group overflow-hidden [--gap:1.5rem]">
+      <div className={`flex items-stretch [gap:var(--gap)] animate-marquee-${direction} group-hover:[animation-play-state:paused]`}>
+        <div className="flex items-stretch [gap:var(--gap)]">
+          {items.map((t) => (
+            <TestimonialCard key={`${prefix}-${t.id}`} testimonial={t} />
+          ))}
+        </div>
+        <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
+          {items.map((t) => (
+            <TestimonialCard key={`${prefix}-dup-${t.id}`} testimonial={t} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Reviews() {
   const { ref, inView } = useInView(0.1);
 
@@ -310,34 +331,8 @@ export default function Reviews() {
       </div>
 
       <div style={{ ...fadeUp(inView, 200) }} className="flex flex-col gap-6">
-        <div className="group overflow-hidden [--gap:1.5rem]">
-          <div className="flex items-stretch [gap:var(--gap)] animate-marquee-right group-hover:[animation-play-state:paused]">
-            <div className="flex items-stretch [gap:var(--gap)]">
-              {rowA.map((t) => (
-                <TestimonialCard key={`a-${t.id}`} testimonial={t} />
-              ))}
-            </div>
-            <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
-              {rowA.map((t) => (
-                <TestimonialCard key={`a-dup-${t.id}`} testimonial={t} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="group overflow-hidden [--gap:1.5rem]">
-          <div className="flex items-stretch [gap:var(--gap)] animate-marquee-left group-hover:[animation-play-state:paused]">
-            <div className="flex items-stretch [gap:var(--gap)]">
-              {rowB.map((t) => (
-                <TestimonialCard key={`b-${t.id}`} testimonial={t} />
-              ))}
-            </div>
-            <div className="flex items-stretch [gap:var(--gap)]" aria-hidden="true">
-              {rowB.map((t) => (
-                <TestimonialCard key={`b-dup-${t.id}`} testimonial={t} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <MarqueeRow items={rowA} direction="right" prefix="a" />
+        <MarqueeRow items={rowB} direction="left" prefix="b" />
       </div>
     </section>
   );

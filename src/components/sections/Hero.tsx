@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 
 const BOOKING_URL =
@@ -7,12 +7,34 @@ const BOOKING_URL =
 const HERO_IMG =
   'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/f9fc1605-0ca5-4e56-bae8-2a2dc59e7b4c-standard-9psczl.jpg';
 
-// Real reviewer avatars (mirrors the Google reviews in Reviews.tsx).
 const REVIEW_AVATARS = [
   'https://lh3.googleusercontent.com/a-/ALV-UjXsOQ9ch2xM33mm8lili9sRmhk6tcjC1ycus47CxlsNfOkZbgIT=w96-h96-p-rp-mo-br100',
   'https://lh3.googleusercontent.com/a/ACg8ocJxU17riqrBQg2VkQlea9ykmmwQgqolUadruLUUBc6UOTJNKg=w96-h96-p-rp-mo-ba12-br100',
   'https://lh3.googleusercontent.com/a/ACg8ocI_nA2h9Wsmdod4dDFtKF5oM7mID7w1SkQ57jAPhyHD_2z9OXU=w96-h96-p-rp-mo-br100',
 ];
+
+type HeadlineLine = { delay: number; children: ReactNode };
+
+const HEADLINE_LINES: HeadlineLine[] = [
+  { delay: 0.3, children: 'Gastvrijheid' },
+  {
+    delay: 0.48,
+    children: (
+      <>
+        <span style={{ fontWeight: 300 }}>voor de</span> Moderne
+      </>
+    ),
+  },
+  { delay: 0.56, children: 'Man' },
+];
+
+const TICK_STYLE: CSSProperties = {
+  width: 'clamp(14px, 1.6vw, 22px)',
+  height: '2px',
+  background: '#fff',
+  flexShrink: 0,
+  display: 'inline-block',
+};
 
 const enter = (name: string, delay: number, duration = 0.75): CSSProperties => ({
   animation: `${name} ${duration}s cubic-bezier(0.22,0.68,0,1.2) ${delay}s both`,
@@ -35,6 +57,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="metadata"
         poster={HERO_IMG}
         aria-label="Clean Cuts Wageningen"
         style={{
@@ -98,70 +121,20 @@ export default function Hero() {
             letterSpacing: '-1.5px',
           }}
         >
-          {/* Regel 1: Gastvrijheid */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'clamp(12px, 1.5vw, 20px)',
-              ...enter('heroFadeUp', 0.3),
-            }}
-          >
-            <span
+          {HEADLINE_LINES.map(({ delay, children }) => (
+            <div
+              key={delay}
               style={{
-                width: 'clamp(14px, 1.6vw, 22px)',
-                height: '2px',
-                background: '#fff',
-                flexShrink: 0,
-                display: 'inline-block',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'clamp(12px, 1.5vw, 20px)',
+                ...enter('heroFadeUp', delay),
               }}
-            />
-            <span style={{ display: 'block' }}>Gastvrijheid</span>
-          </div>
-
-          {/* Regel 2: voor de Moderne */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'clamp(12px, 1.5vw, 20px)',
-              ...enter('heroFadeUp', 0.48),
-            }}
-          >
-            <span
-              style={{
-                width: 'clamp(14px, 1.6vw, 22px)',
-                height: '2px',
-                background: '#fff',
-                flexShrink: 0,
-                display: 'inline-block',
-              }}
-            />
-            <span style={{ display: 'block' }}>
-              <span style={{ fontWeight: 300 }}>voor de</span> Moderne
-            </span>
-          </div>
-
-          {/* Regel 3: Man */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'clamp(12px, 1.5vw, 20px)',
-              ...enter('heroFadeUp', 0.56),
-            }}
-          >
-            <span
-              style={{
-                width: 'clamp(14px, 1.6vw, 22px)',
-                height: '2px',
-                background: '#fff',
-                flexShrink: 0,
-                display: 'inline-block',
-              }}
-            />
-            <span style={{ display: 'block' }}>Man</span>
-          </div>
+            >
+              <span style={TICK_STYLE} />
+              <span style={{ display: 'block' }}>{children}</span>
+            </div>
+          ))}
 
           {/* Buttons */}
           <div
@@ -248,7 +221,7 @@ export default function Hero() {
           <div style={{ display: 'flex' }}>
             {REVIEW_AVATARS.map((src, i) => (
               <img
-                key={i}
+                key={src}
                 src={src}
                 alt=""
                 aria-hidden="true"

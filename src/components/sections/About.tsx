@@ -22,7 +22,7 @@ export default function About() {
         }}
       >
         <img
-          src="/image.png"
+          src="/image.webp"
           alt="Clean Cuts Wageningen — de zaak"
           style={{
             width: '100%',
