@@ -35,7 +35,7 @@ const services = [
     title: 'Tondeuse 1 standje',
     duration: '20 min',
     desc: 'Over de gehele hoofd 1 standje, zonder overloop.',
-    price: 'v.a. € —',
+    price: 'v.a. € 15,00',
     popular: false,
   },
   {
