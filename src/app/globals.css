@@ -140,6 +140,17 @@ details.faq[open] .faqIco { transform: rotate(45deg); }
   box-shadow: 0 12px 32px rgba(0,0,0,0.09);
 }
 
+/* ─── Services: toon-meer knop alleen op mobiel ─── */
+.services-toggle-wrap { display: none; }
+@media (max-width: 640px) {
+  .services-toggle-wrap { display: flex; justify-content: center; }
+  /* Op desktop altijd alle kaarten tonen, op mobiel regelt JS de zichtbaarheid */
+}
+@media (min-width: 641px) {
+  /* Forceer alle kaarten zichtbaar op desktop, ongeacht expanded-state */
+  .services-mobile-extra { display: flex !important; }
+}
+
 /* ─── Review card hover ─── */
 .review-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;

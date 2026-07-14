@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useInView, fadeUp } from '../../hooks/useInView';
 import { BOOKING_URL } from '@/lib/site-config';
 
@@ -56,6 +57,7 @@ const services = [
 
 export default function Services() {
   const { ref, inView } = useInView(0.1);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <section
@@ -141,76 +143,113 @@ export default function Services() {
           gap: '18px',
         }}
       >
-        {services.map((s, i) => (
-          <div
-            key={s.num}
-            className="service-card"
-            style={{
-              background: s.popular ? '#111111' : '#fff',
-              border: 'none',
-              borderRadius: '14px',
-              padding: '26px 24px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '10px',
-              minHeight: '230px',
-              color: s.popular ? '#f4f4f4' : undefined,
-              cursor: 'default',
-              ...fadeUp(inView, 100 + i * 80),
-            }}
-          >
+        {services.map((s, i) => {
+          const hidden = i >= 3 && !expanded;
+          return (
             <div
+              key={s.num}
+              className="service-card services-mobile-extra"
               style={{
-                font: "600 11px 'Space Grotesk', system-ui",
-                letterSpacing: '2px',
-                color: s.popular ? 'rgba(245,245,245,.55)' : '#b3b3b3',
+                background: s.popular ? '#111111' : '#fff',
+                border: 'none',
+                borderRadius: '14px',
+                padding: '26px 24px',
+                display: hidden ? 'none' : 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+                minHeight: '230px',
+                color: s.popular ? '#f4f4f4' : undefined,
+                cursor: 'default',
+                ...fadeUp(inView, 100 + i * 80),
               }}
             >
-              {s.num}
-              {s.popular ? ' · Populair' : ''}
-            </div>
-            <div style={{ marginTop: 'auto' }}>
+              <div
+                style={{
+                  font: "600 11px 'Space Grotesk', system-ui",
+                  letterSpacing: '2px',
+                  color: s.popular ? 'rgba(245,245,245,.55)' : '#b3b3b3',
+                }}
+              >
+                {s.num}
+                {s.popular ? ' · Populair' : ''}
+              </div>
+              <div style={{ marginTop: 'auto' }}>
+                <div
+                  style={{
+                    fontFamily: "'Outfit', system-ui, sans-serif",
+                    fontSize: '24px',
+                    color: s.popular ? '#f4f4f4' : '#181818',
+                  }}
+                >
+                  {s.title}
+                </div>
+                <div
+                  style={{
+                    font: "500 12px 'Hanken Grotesk', system-ui",
+                    color: s.popular ? 'rgba(245,245,245,.45)' : '#b3b3b3',
+                    marginTop: '3px',
+                  }}
+                >
+                  {s.duration}
+                </div>
+              </div>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: '13.5px',
+                  lineHeight: 1.5,
+                  color: s.popular ? 'rgba(245,245,245,.7)' : '#6e6e6e',
+                  fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
+                }}
+              >
+                {s.desc}
+              </p>
               <div
                 style={{
                   fontFamily: "'Outfit', system-ui, sans-serif",
-                  fontSize: '24px',
-                  color: s.popular ? '#f4f4f4' : '#181818',
+                  fontSize: '22px',
+                  color: s.popular ? '#f4f4f4' : '#111111',
                 }}
               >
-                {s.title}
-              </div>
-              <div
-                style={{
-                  font: "500 12px 'Hanken Grotesk', system-ui",
-                  color: s.popular ? 'rgba(245,245,245,.45)' : '#b3b3b3',
-                  marginTop: '3px',
-                }}
-              >
-                {s.duration}
+                {s.price}
               </div>
             </div>
-            <p
-              style={{
-                margin: 0,
-                fontSize: '13.5px',
-                lineHeight: 1.5,
-                color: s.popular ? 'rgba(245,245,245,.7)' : '#6e6e6e',
-                fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
-              }}
-            >
-              {s.desc}
-            </p>
-            <div
-              style={{
-                fontFamily: "'Outfit', system-ui, sans-serif",
-                fontSize: '22px',
-                color: s.popular ? '#f4f4f4' : '#111111',
-              }}
-            >
-              {s.price}
-            </div>
-          </div>
-        ))}
+          );
+        })}
+      </div>
+
+      {/* Toon meer / minder knop — alleen zichtbaar op mobiel */}
+      <div className="services-toggle-wrap">
+        <button
+          onClick={() => setExpanded((v) => !v)}
+          style={{
+            marginTop: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: 'none',
+            border: '1.5px solid #d0d0d0',
+            borderRadius: '10px',
+            padding: '12px 22px',
+            fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
+            fontWeight: 600,
+            fontSize: '14px',
+            color: '#111111',
+            cursor: 'pointer',
+            transition: 'border-color 0.2s ease',
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#888')}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#d0d0d0')}
+        >
+          {expanded ? 'Minder diensten' : 'Meer diensten'}
+          <svg
+            width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
+            style={{ transition: 'transform 0.25s ease', transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
       </div>
     </section>
   );
