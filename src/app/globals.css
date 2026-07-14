@@ -60,11 +60,9 @@
 @media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .team-avatar { width: 22vw !important; height: 22vw !important; }
 }
 @media (max-width: 380px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .team-avatar { width: 32vw !important; height: 32vw !important; }
 }
 @media (max-width: 680px) {
   .hero-review-card { display: none !important; }
