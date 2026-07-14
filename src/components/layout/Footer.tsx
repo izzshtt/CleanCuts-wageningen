@@ -5,6 +5,16 @@ import { useInView, fadeUp, fadeIn } from '../../hooks/useInView';
 const OG_LOGO =
   'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/image-high.png';
 
+const footerLinkBaseStyle = {
+  color: '#d4d4d4',
+  textDecoration: 'none',
+  transition: 'color 0.18s ease, opacity 0.18s ease',
+} as const;
+
+const footerLinkHoverStyle = {
+  color: '#ffffff',
+} as const;
+
 export default function Footer() {
   const { ref, inView } = useInView(0.05);
 
@@ -88,14 +98,26 @@ export default function Footer() {
               href="https://maps.google.com/maps?q=Lawickse+Allee+3%2C+Wageningen"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}
+              style={{ ...footerLinkBaseStyle, display: 'block' }}
+              onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+              onMouseLeave={(event) => Object.assign(event.currentTarget.style, footerLinkBaseStyle)}
             >
               Lawickse Allee 3c<br />6701 AN Wageningen
             </a>
-            <a href="tel:0615618319" style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}>
+            <a
+              href="tel:0615618319"
+              style={{ ...footerLinkBaseStyle, display: 'block' }}
+              onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+              onMouseLeave={(event) => Object.assign(event.currentTarget.style, footerLinkBaseStyle)}
+            >
               06 15618319
             </a>
-            <a href="mailto:info@cleancuts.nl" style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}>
+            <a
+              href="mailto:info@cleancuts.nl"
+              style={{ ...footerLinkBaseStyle, display: 'block' }}
+              onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+              onMouseLeave={(event) => Object.assign(event.currentTarget.style, footerLinkBaseStyle)}
+            >
               info@cleancuts.nl
             </a>
           </div>
@@ -148,13 +170,14 @@ export default function Footer() {
             href="https://instagram.com/cleancuts_wageningen"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              color: 'inherit',
-              textDecoration: 'none',
+            style={{ ...footerLinkBaseStyle, display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+            onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+            onMouseLeave={(event) => Object.assign(event.currentTarget.style, {
+              ...footerLinkBaseStyle,
               display: 'inline-flex',
               alignItems: 'center',
               gap: '6px',
-            }}
+            })}
           >
             <svg
               width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -170,13 +193,14 @@ export default function Footer() {
             href="https://www.tiktok.com/@cleancuts_wageningen"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              color: 'inherit',
-              textDecoration: 'none',
+            style={{ ...footerLinkBaseStyle, display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+            onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+            onMouseLeave={(event) => Object.assign(event.currentTarget.style, {
+              ...footerLinkBaseStyle,
               display: 'inline-flex',
               alignItems: 'center',
               gap: '6px',
-            }}
+            })}
           >
             <svg
               width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
@@ -191,17 +215,20 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: '#cfcfcf',
-            textDecoration: 'none',
+            ...footerLinkBaseStyle,
             justifySelf: 'center',
           }}
+          onMouseEnter={(event) => Object.assign(event.currentTarget.style, { ...footerLinkHoverStyle, justifySelf: 'center' })}
+          onMouseLeave={(event) => Object.assign(event.currentTarget.style, { ...footerLinkBaseStyle, justifySelf: 'center' })}
         >
           Designed by Altevo
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap', justifySelf: 'end' }}>
           <a
             href="/algemene-voorwaarden"
-            style={{ color: 'inherit', textDecoration: 'none' }}
+            style={footerLinkBaseStyle}
+            onMouseEnter={(event) => Object.assign(event.currentTarget.style, footerLinkHoverStyle)}
+            onMouseLeave={(event) => Object.assign(event.currentTarget.style, footerLinkBaseStyle)}
           >
             Algemene voorwaarden
           </a>
