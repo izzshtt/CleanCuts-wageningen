@@ -131,13 +131,12 @@ export default function Footer() {
       {/* Bottom bar */}
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
+          display: 'grid',
+          gridTemplateColumns: '1fr auto 1fr',
           alignItems: 'center',
           paddingTop: '26px',
           fontSize: '12.5px',
           color: '#7d7d7d',
-          flexWrap: 'wrap',
           gap: '12px',
           fontFamily: "'Hanken Grotesk', system-ui, sans-serif",
           ...fadeIn(inView, 300),
@@ -187,7 +186,19 @@ export default function Footer() {
             TikTok
           </a>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap' }}>
+        <a
+          href="https://altevo.nl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: '#cfcfcf',
+            textDecoration: 'none',
+            justifySelf: 'center',
+          }}
+        >
+          Designed by Altevo
+        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap', justifySelf: 'end' }}>
           <a
             href="/algemene-voorwaarden"
             style={{ color: 'inherit', textDecoration: 'none' }}
