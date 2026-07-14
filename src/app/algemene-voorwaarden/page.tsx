@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Nav from '@/components/layout/Nav';
 import Footer from '@/components/layout/Footer';
 
@@ -41,6 +42,28 @@ export default function AlgemeneVoorwaarden() {
           margin: '0 auto',
         }}
       >
+        <Link
+          href="/"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '44px',
+            padding: '10px 18px',
+            marginBottom: '28px',
+            borderRadius: '999px',
+            background: '#111111',
+            color: '#f4f4f4',
+            textDecoration: 'none',
+            fontSize: '14px',
+            fontWeight: 600,
+            letterSpacing: '0.2px',
+            boxShadow: '0 10px 24px rgba(17, 17, 17, 0.12)',
+          }}
+        >
+          Terug naar home
+        </Link>
+
         <h1
           style={{
             fontFamily: "'Outfit', system-ui, sans-serif",

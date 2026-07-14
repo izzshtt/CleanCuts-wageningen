@@ -99,7 +99,7 @@ function FaqProRow({
           aria-hidden={!isOpen}
           className="px-5 pb-5 text-[14px] text-muted-foreground leading-6"
           initial={false}
-          {...({ inert: isOpen ? undefined : "" } as Record<string, unknown>)}
+          inert={isOpen ? undefined : true}
           transition={{
             opacity: {
               duration: isOpen ? 0.38 : 0.2,
