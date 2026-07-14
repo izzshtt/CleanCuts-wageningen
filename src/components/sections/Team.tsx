@@ -28,6 +28,7 @@ function Avatar({ member, delay, inView }: { member: TeamMember; delay: number; 
       }}
     >
       <div
+        className="team-avatar"
         style={{
           width: 'clamp(140px, 18vw, 200px)',
           height: 'clamp(140px, 18vw, 200px)',
