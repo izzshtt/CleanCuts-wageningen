@@ -170,7 +170,7 @@ export default function Footer() {
         }}
       >
         <div className="footer-bottom-left" style={{ display: 'flex', alignItems: 'center', gap: '22px', flexWrap: 'wrap' }}>
-          <span>© 2026 Clean Cuts Wageningen</span>
+          <span>© 2025 Clean Cuts Wageningen</span>
           <a
             href="https://www.instagram.com/cleancuts_wageningen"
             target="_blank"
