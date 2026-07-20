@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Outfit, Hanken_Grotesk, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
@@ -73,6 +73,11 @@ export const metadata: Metadata = {
   other: {
     'theme-color': '#111111',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
