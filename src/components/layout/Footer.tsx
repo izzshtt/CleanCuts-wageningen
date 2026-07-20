@@ -190,7 +190,7 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="https://www.tiktok.com/@cleancutswageningen?_r=1&_t=ZG-981gdS4Y7lo"
+            href="https://www.tiktok.com/@gijsthebarberdutch?_r=1&_t=ZG-98C30tfSgXh"
             target="_blank"
             rel="noopener noreferrer"
             style={{ ...LINK_BASE, ...SOCIAL_LINK_EXTRA }}
@@ -232,7 +232,7 @@ export default function Footer() {
               color: '#7d7d7d',
             }}
           >
-            CLEAN CUTS
+            
           </span>
         </div>
       </div>
