@@ -5,8 +5,6 @@ import type { CSSProperties, ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import { BOOKING_URL } from '@/lib/site-config';
 
-const HERO_IMG =
-  'https://primary.jwwb.nl/public/m/y/z/temp-pwwkhjkqflqfcxgkbrvr/f9fc1605-0ca5-4e56-bae8-2a2dc59e7b4c-standard-9psczl.jpg';
 
 const REVIEW_AVATARS = [
   'https://lh3.googleusercontent.com/a-/ALV-UjXsOQ9ch2xM33mm8lili9sRmhk6tcjC1ycus47CxlsNfOkZbgIT=w96-h96-p-rp-mo-br100',
@@ -53,10 +51,10 @@ export default function Hero() {
     const setSource = () => {
       const wanted = mql.matches ? '/hero-mobile.mp4' : '/hero.mp4';
       if (video.getAttribute('src') === wanted) return;
-      const wasPlaying = !video.paused;
+      video.poster = mql.matches ? '/hero-poster-mobile.jpg' : '/hero-poster.jpg';
       video.src = wanted;
       video.load();
-      if (wasPlaying) video.play().catch(() => {});
+      video.play().catch(() => {});
     };
 
     setSource();
@@ -77,13 +75,12 @@ export default function Hero() {
       {/* Background video — subtle fade-in, image poster as fallback */}
       <video
         ref={videoRef}
-        src="/hero.mp4"
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        poster={HERO_IMG}
+        poster="/hero-poster.jpg"
         aria-label="Clean Cuts Wageningen"
         className="hero-video"
         style={{
