@@ -316,7 +316,6 @@ export default function Reviews() {
           }}
         >
           Meer dan 60+ tevreden klanten in Wageningen: gemiddeld 4,9 sterren.
-          Tevreden? Laat ook een review achter.
         </p>
       </div>
 
