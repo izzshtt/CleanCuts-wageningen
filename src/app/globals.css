@@ -51,6 +51,30 @@
   justify-items: center;
 }
 
+/* ─── Instagram-reel bij Intro ─── */
+.intro-reel {
+  width: 326px;
+  max-width: 90vw;
+  margin: 40px auto 0;
+}
+@media (min-width: 1200px) {
+  .intro-reel {
+    position: absolute;
+    top: clamp(56px, 8vw, 80px);
+    left: calc(100% + 220px);
+    width: 200px;
+    margin: 0;
+  }
+  .intro-reel blockquote.instagram-media,
+  .intro-reel iframe.instagram-media {
+    width: 326px !important;
+    min-width: 326px !important;
+    max-width: 326px !important;
+    transform: scale(0.613);
+    transform-origin: top left;
+  }
+}
+
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; gap: 40px; }
