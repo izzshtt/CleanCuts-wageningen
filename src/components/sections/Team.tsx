@@ -90,7 +90,7 @@ function Avatar({ member, delay, inView }: { member: TeamMember; delay: number; 
 }
 
 export default function Team() {
-  const { ref, inView } = useInView(0.08);
+  const { ref, inView } = useInView(0.18);
 
   return (
     <section
