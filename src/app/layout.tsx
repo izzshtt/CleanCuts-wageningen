@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/cleancuts-logo.webp', type: 'image/webp', sizes: '512x512' },
+      { url: '/favicon.png', type: 'image/png', sizes: '48x48' },
     ],
     apple: '/cleancuts-logo.webp',
     shortcut: '/favicon.svg',
