@@ -198,17 +198,17 @@
   .hero-headline .pill-btn {
     text-shadow: none;
   }
-  /* iOS rasteriseert transforms als blur — knoppen alleen faden op mobiel */
-  .hero-headline .pill-btn {
+  /* iOS rasteriseert transforms als blur — wrapper faden i.p.v. translateY */
+  .hero-cta-row {
     animation-name: heroFadeIn !important;
   }
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(20,18,15,0.30) 0%,
-      rgba(20,18,15,0.50) 35%,
-      rgba(20,18,15,0.90) 60%,
-      rgba(20,18,15,0.97) 100%
+      rgba(20,18,15,0.15) 0%,
+      rgba(20,18,15,0.30) 40%,
+      rgba(20,18,15,0.55) 70%,
+      rgba(20,18,15,0.85) 100%
     ) !important;
   }
 }

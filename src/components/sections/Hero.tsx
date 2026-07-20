@@ -158,6 +158,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
+            className="hero-cta-row"
             style={{
               display: 'flex',
               gap: 'clamp(10px, 1vw, 14px)',
