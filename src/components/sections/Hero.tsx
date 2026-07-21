@@ -79,7 +79,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster="/hero-poster.jpg"
         aria-label="Clean Cuts Wageningen"
         className="hero-video"
